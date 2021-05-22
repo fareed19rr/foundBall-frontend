@@ -2,10 +2,6 @@ import React from 'react';
 import useGoogleSearch from '../useGoogleSearch'
 import Search from "../components/Search";
 import SearchIcon from "@material-ui/icons/Search";
-import ImageIcon from "@material-ui/icons/Image";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import RoomIcon from "@material-ui/icons/Room";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { Link } from "react-router-dom";
 import './SearchScreen.css';
 import { useStateValue } from '../StateProvider';
@@ -20,50 +16,19 @@ function SearchScreen(){
             <div className='searchScreen_header'>
                 <Link to='/'>
                     <img className="searchPage__logo"
-                        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                        src="https://i.ibb.co/z7PcVs3/F-und-Ball.png"
                         alt=""/>
                 </Link>
+            </div>
 
-                <div className='searchPage_headerBody'>
-                    <Search hideButtons />
-                    <div className='searchPage_options'>
-                        <div className='searchPage_optionsLeft'>
-                            <div className='searchPage_options'>
-                                <SearchIcon />
-                                <Link to='/all'>All</Link>
-                            </div>
+            <div className='searchPage_headerBody'>
+                <Search hideButtons />
+                <div className='searchPage_options'>
+                    <div className='searchPage_optionsLeft'>
 
-                            <div className='searchPage_option'>
-                                <ImageIcon />
-                                <Link to='/images'>Images</Link>
-                            </div>
-
-                            <div className='searchPage_option'>
-                                <LocalOfferIcon />
-                                <Link to ='/shopping'>Shopping</Link>
-                            </div>
-
-                            <div className='searchPage_option'>
-                                <RoomIcon />
-                                <Link to ='/maps'>maps</Link>
-                            </div>
-
-                            <div className="searchPage__option">
-                                <MoreVertIcon />
-                                <Link to="/more">more</Link>
-                            </div>
-                        </div>
-
-                        <div className='searchPage_optionsRight'>
-                            <div className='searchPage_option'>
-                                <Link to='/settings'>Setting</Link>
-                            </div>
-
-                            <div className='searchPage_option'>
-                                <Link to='/tools'>Tools</Link>
-                            </div>
-                        </div>
+                        
                     </div>
+
                 </div>
             </div>
 

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import SearchScreen from './screens/SearchScreen';
+import FilterScreen from './screens/FilterScreen';
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
 
           <Route path='/'>
             <HomeScreen />
+          </Route>
+
+          <Route path='/filter'>
+            <FilterScreen />
           </Route>
         </Switch>
       </Router>

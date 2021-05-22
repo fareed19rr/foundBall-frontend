@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Search.css';
 import SearchIcon from '@material-ui/icons/Search';
-import MicIcon from '@material-ui/icons/Mic';
 import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
@@ -30,13 +29,12 @@ function Search({ hideButtons = false }) {
             <div className='search_input'>
                 <SearchIcon className='search_inputIcon' />
                 <input value={term} onChange={(e) => setTerm(e.target.value)}/>
-                <MicIcon />
             </div>
 
             { !hideButtons ? (
                 <div className='search_buttons'>
-                    <Button variant='outlined' type='submit'>Google Search</Button>
-                    <Button variant='outlined' type='submit'>I'm Feeling Lucky</Button>
+                    <Button variant='outlined' type='submit'>Search</Button>
+                    <Button variant='outlined' type='submit'>Filter</Button>
                 </div>
             ) : (
                 <div className='search_button'>
@@ -46,11 +44,11 @@ function Search({ hideButtons = false }) {
                         type='submit'
                         variant='outlined'
                         >
-                            Google Search<Link to='/search'></Link>
+                            Search<Link to='/search'></Link>
                         </Button>
                     
                     <Button className='search_buttonsHidden' variant='outlined'>
-                        I'm Feeling Lucky
+                        Filter<Link to='/filter'></Link>
                     </Button>
                 </div>
             )}

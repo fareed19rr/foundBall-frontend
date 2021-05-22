@@ -2,7 +2,7 @@
   display: flex;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: #00FF85;
   z-index: 100;
   align-items: flex-start;
   padding: 30px;
